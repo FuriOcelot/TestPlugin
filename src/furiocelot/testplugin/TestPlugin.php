@@ -11,14 +11,12 @@ use pocketmine\{
 class TestPlugin extends PluginBase{
 	public function onLoad() : void{
 		$this->getLogger()->info(Color::WHITE . "I've been loaded!");
-		$data = [
-			["alphabet" => "a", "word" => "Apple"],
-			["alphabet" => "b", "word" => "Banana"],
-			["alphabet" => "c", "word" => "Carrot"]
-		];
-		foreach($data as ["alphabet" => $alphabet, "word" => $word]){
-			$this->getLogger()->info(Color::YELLOW . "$alphabet is $word");
-		}
+
+		$a = "banana";
+		$b = "apple";
+		$this->getLogger()->info(Color::YELLOW . "\$a=>$a, \$b=>$b");
+		$this->swap($a, $b);
+		$this->getLogger()->info(Color::YELLOW . "\$a=>$a, \$b=>$b");
 	}
 
 	public function onEnable() : void{
@@ -27,5 +25,9 @@ class TestPlugin extends PluginBase{
 
 	public function onDisable() : void{
 		$this->getLogger()->info(Color::DARK_RED . "I've been disabled!");
+	}
+
+	private function swap(&$a, &$b) : void{
+		[$a, $b] = [$b, $a];
 	}
 }
