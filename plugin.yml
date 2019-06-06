@@ -1,0 +1,13 @@
+---
+name: TestPlugin
+main: furiocelot\testplugin\TestPlugin
+version: 0.1.0
+api: [3.0.0, 4.0.0]
+author: FuriousOcelot
+description: 플러그인 테스트용 플러그인입니다!
+
+permissions:
+  makepluginplus.cmd:
+    description: MakePluginPlus main command
+    default: op
+...
