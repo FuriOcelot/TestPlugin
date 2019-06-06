@@ -12,11 +12,11 @@ class TestPlugin extends PluginBase{
 	public function onLoad() : void{
 		$this->getLogger()->info(Color::WHITE . "I've been loaded!");
 		$data = [
-			["a", "Apple"],
-			["b", "Banana"],
-			["c", "Carrot"]
+			["alphabet" => "a", "word" => "Apple"],
+			["alphabet" => "b", "word" => "Banana"],
+			["alphabet" => "c", "word" => "Carrot"]
 		];
-		foreach($data as [$alphabet, $word]){
+		foreach($data as ["alphabet" => $alphabet, "word" => $word]){
 			$this->getLogger()->info(Color::YELLOW . "$alphabet is $word");
 		}
 	}
