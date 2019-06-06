@@ -11,6 +11,14 @@ use pocketmine\{
 class TestPlugin extends PluginBase{
 	public function onLoad() : void{
 		$this->getLogger()->info(Color::WHITE . "I've been loaded!");
+		$data = [
+			["a", "Apple"],
+			["b", "Banana"],
+			["c", "Carrot"]
+		];
+		foreach($data as [$alphabet, $word]){
+			$this->getLogger()->info(Color::YELLOW . "$alphabet is $word");
+		}
 	}
 
 	public function onEnable() : void{
