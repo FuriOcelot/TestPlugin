@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 namespace furiocelot\testplugin;
 
-use pocketmine\plugin\PluginBase, 
-		pocketmine\utils\TextFormat as Color;
+use pocketmine\{
+	plugin\PluginBase,
+	utils\TextFormat as Color
+};
 
 class TestPlugin extends PluginBase{
 	public function onLoad() : void{
