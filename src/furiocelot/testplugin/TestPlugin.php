@@ -11,7 +11,7 @@ use pocketmine\{
 class TestPlugin extends PluginBase{
 	public function onLoad() : void{
 		$this->getLogger()->info(Color::WHITE . "I've been loaded!");
-}
+	}
 
 	public function onEnable() : void{
 		$this->getLogger()->info(Color::DARK_GREEN . "I've been enabled!");
